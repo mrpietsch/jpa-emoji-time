@@ -13,6 +13,8 @@ import static org.junit.Assert.assertThat;
 
 public class TextControllerIntegrationTest extends AbstractRestControllerTest<TextEntity> {
 
+    private static final String EMOJI = "\uD83D\uDE00";
+
     @Autowired
     TextRepository repository;
 
@@ -25,8 +27,8 @@ public class TextControllerIntegrationTest extends AbstractRestControllerTest<Te
     @Before
     public void setup() {
         TextEntity textEntity = new TextEntity();
-        textEntity.setName("Name");
-        textEntity.setText("Text");
+        textEntity.setName("Name " + EMOJI);
+        textEntity.setText("Text " + EMOJI);
         exampleEntity = repository.save(textEntity);
     }
 

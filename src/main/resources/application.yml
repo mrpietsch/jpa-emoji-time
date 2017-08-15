@@ -3,3 +3,7 @@ spring.datasource:
   username: "root"
   password:
   driver-class-name: "com.mysql.jdbc.Driver"
+
+  # enable UTF-8-MB4 (Emojis, 4-byte Unicodes)
+  test-on-connect: true
+  validation-query: "SET NAMES utf8mb4"
