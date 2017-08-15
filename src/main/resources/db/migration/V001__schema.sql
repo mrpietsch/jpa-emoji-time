@@ -1,0 +1,6 @@
+CREATE TABLE text_entities (
+  id   BIGINT      NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  text LONGTEXT,
+  PRIMARY KEY (id)
+);
